@@ -28,8 +28,8 @@ function getAuth(): BetterAuthInstance {
 	authInstance = betterAuth({
 		database: mongodbAdapter(client.db(MONGODB_NAME)),
 		secret: BETTER_AUTH_SECRET,
-		baseURL: BETTER_AUTH_URL || 'http://localhost:5173',
-		trustedOrigins: ['http://localhost:5173'],
+		baseURL: BETTER_AUTH_URL,
+		trustedOrigins: [BETTER_AUTH_URL],
 		emailAndPassword: {
 			enabled: true
 		},
