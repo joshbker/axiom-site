@@ -1,0 +1,13 @@
+networks:
+  proxiable:
+    name: proxiable
+    external: true
+
+services:
+  axiom-site:
+    container_name: axiom-site
+    image: axiom-site:latest
+    env_file:
+      - .env
+    networks:
+      - proxiable
