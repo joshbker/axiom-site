@@ -105,16 +105,16 @@
 			<header class="flex items-center justify-between mb-8 sm:mb-12">
 				<!-- Left: Logo + Nav Links -->
 				<div class="flex items-center gap-6">
-					<a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-						<div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-500/20">
-							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-								<polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
-								<line x1="12" y1="22" x2="12" y2="15.5"></line>
-								<polyline points="22 8.5 12 15.5 2 8.5"></polyline>
-							</svg>
-						</div>
+				<a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+					<div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-500/20">
+						<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+							<line x1="12" y1="22" x2="12" y2="15.5"></line>
+							<polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+						</svg>
+					</div>
 						<span class="text-xl font-semibold tracking-wide hidden sm:block" style="font-family: 'Rajdhani', sans-serif;">AXIOM</span>
-					</a>
+				</a>
 
 					<!-- Nav Links -->
 					<nav class="hidden sm:flex items-center gap-6">
@@ -166,41 +166,41 @@
 							</div>
 						{/if}
 
-						<!-- Search Results Dropdown -->
-						{#if showSearchResults && searchQuery.length >= 2}
+					<!-- Search Results Dropdown -->
+					{#if showSearchResults && searchQuery.length >= 2}
 							<div class="absolute top-full right-0 w-full mt-2 bg-card border border-white/10 rounded-lg shadow-xl overflow-hidden z-50">
-								{#if searchResults.length === 0 && !searchLoading}
-									<div class="px-4 py-3 text-base text-muted-foreground" style="font-family: 'Rajdhani', sans-serif;">
-										No players found
-									</div>
-								{:else}
-									{#each searchResults as player}
-										<button
-											type="button"
-											class="w-full px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-colors text-left cursor-pointer"
-											onclick={() => selectPlayer(player.playerId)}
-										>
-											<div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center shrink-0">
-												<span class="text-sm font-bold text-white" style="font-family: 'Orbitron', sans-serif;">
-													{player.playerName.charAt(0).toUpperCase()}
-												</span>
+							{#if searchResults.length === 0 && !searchLoading}
+								<div class="px-4 py-3 text-base text-muted-foreground" style="font-family: 'Rajdhani', sans-serif;">
+									No players found
+								</div>
+							{:else}
+								{#each searchResults as player}
+									<button
+										type="button"
+										class="w-full px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-colors text-left cursor-pointer"
+										onclick={() => selectPlayer(player.playerId)}
+									>
+										<div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center shrink-0">
+											<span class="text-sm font-bold text-white" style="font-family: 'Orbitron', sans-serif;">
+												{player.playerName.charAt(0).toUpperCase()}
+											</span>
+										</div>
+										<div class="flex-1 min-w-0">
+											<div class="font-semibold text-white truncate" style="font-family: 'Rajdhani', sans-serif;">
+												{player.playerName}
 											</div>
-											<div class="flex-1 min-w-0">
-												<div class="font-semibold text-white truncate" style="font-family: 'Rajdhani', sans-serif;">
-													{player.playerName}
-												</div>
-												<div class="text-sm text-muted-foreground" style="font-family: 'Rajdhani', sans-serif;">
-													High: {player.highScore.toLocaleString()} · {player.gamesPlayed} games
-												</div>
+											<div class="text-sm text-muted-foreground" style="font-family: 'Rajdhani', sans-serif;">
+												High: {player.highScore.toLocaleString()} · {player.gamesPlayed} games
 											</div>
-										</button>
-									{/each}
-								{/if}
-							</div>
-						{/if}
-					</div>
+										</div>
+									</button>
+								{/each}
+							{/if}
+						</div>
+					{/if}
+				</div>
 
-					<!-- Auth Buttons -->
+				<!-- Auth Buttons -->
 					{#if $session?.data?.user}
 						<!-- Profile Avatar Dropdown -->
 						<DropdownMenu.Root>
