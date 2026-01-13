@@ -63,7 +63,7 @@
 						</svg>
 					</div>
 					<h3 class="text-lg font-bold text-white mb-1" style="font-family: 'Orbitron', sans-serif;">
-						Windows EXE
+						Windows
 					</h3>
 					<p class="text-sm text-muted-foreground mb-4 text-center" style="font-family: 'Rajdhani', sans-serif;">
 						Includes bundled JRE 21<br/>
@@ -71,7 +71,7 @@
 					</p>
 					
 					<a 
-						href="https://github.com/joshbker/axiom-game/releases/latest/download/Axiom.exe"
+						href="https://github.com/joshbker/axiom-game/releases/latest/download/Axiom.zip"
 						class="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-xl shadow-xl shadow-emerald-500/25 transition-all duration-200 hover:scale-105 hover:shadow-emerald-500/40"
 						style="font-family: 'Rajdhani', sans-serif;"
 					>
@@ -80,7 +80,7 @@
 							<polyline points="7 10 12 15 17 10"></polyline>
 							<line x1="12" y1="15" x2="12" y2="3"></line>
 						</svg>
-						<span>Download .exe</span>
+						<span>Download .zip</span>
 					</a>
 					
 					<p class="text-xs text-muted-foreground mt-3" style="font-family: 'Rajdhani', sans-serif;">
@@ -134,7 +134,7 @@
 
 		<!-- Instructions -->
 		<div class="grid md:grid-cols-2 gap-6">
-			<!-- EXE Instructions -->
+			<!-- Windows Instructions -->
 			<div class="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-5 text-left">
 				<h3 class="text-base font-bold text-white mb-3 flex items-center gap-2" style="font-family: 'Orbitron', sans-serif;">
 					<div class="w-6 h-6 rounded bg-emerald-500/20 flex items-center justify-center">
@@ -142,16 +142,20 @@
 							<path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
 						</svg>
 					</div>
-					EXE Instructions
+					Windows Instructions
 				</h3>
 				<ol class="space-y-2 text-muted-foreground text-sm" style="font-family: 'Rajdhani', sans-serif;">
 					<li class="flex items-start gap-2">
 						<span class="shrink-0 w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold" style="font-family: 'Orbitron', sans-serif;">1</span>
-						<span>Download <kbd class="px-1.5 py-0.5 bg-white/10 rounded text-white text-xs">Axiom.exe</kbd></span>
+						<span>Download <kbd class="px-1.5 py-0.5 bg-white/10 rounded text-white text-xs">Axiom.zip</kbd></span>
 					</li>
 					<li class="flex items-start gap-2">
 						<span class="shrink-0 w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold" style="font-family: 'Orbitron', sans-serif;">2</span>
-						<span>Double-click to run — that's it!</span>
+						<span>Extract the zip to a folder</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="shrink-0 w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold" style="font-family: 'Orbitron', sans-serif;">3</span>
+						<span>Run <kbd class="px-1.5 py-0.5 bg-white/10 rounded text-white text-xs">axiom-game.exe</kbd></span>
 					</li>
 				</ol>
 			</div>
