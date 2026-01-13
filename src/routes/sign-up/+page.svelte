@@ -57,7 +57,7 @@
 	<div class="w-full max-w-md">
 		<!-- Logo & Branding -->
 		<a href="/" class="flex items-center justify-center gap-3 mb-8 group">
-			<div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/25 group-hover:shadow-blue-500/40 transition-shadow">
+			<div class="w-12 h-12 bg-emerald-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/25 group-hover:shadow-emerald-500/40 transition-shadow">
 				<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
 					<polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
 					<line x1="12" y1="22" x2="12" y2="15.5"></line>
@@ -102,7 +102,7 @@
 								id="username"
 								type="text"
 								placeholder="Choose your warrior name"
-								class="pl-10 bg-white/5 border-white/10 focus:border-blue-500/50 h-11"
+								class="pl-10 bg-white/5 border-white/10 focus:border-emerald-500/50 h-11"
 								style="font-family: 'Rajdhani', sans-serif;"
 								bind:value={username}
 								required
@@ -124,7 +124,7 @@
 								id="password"
 								type="password"
 								placeholder="Create a strong password"
-								class="pl-10 bg-white/5 border-white/10 focus:border-blue-500/50 h-11"
+								class="pl-10 bg-white/5 border-white/10 focus:border-emerald-500/50 h-11"
 								style="font-family: 'Rajdhani', sans-serif;"
 								bind:value={password}
 								required
@@ -148,7 +148,7 @@
 								id="confirmPassword"
 								type="password"
 								placeholder="Confirm your password"
-								class="pl-10 bg-white/5 border-white/10 focus:border-blue-500/50 h-11"
+								class="pl-10 bg-white/5 border-white/10 focus:border-emerald-500/50 h-11"
 								style="font-family: 'Rajdhani', sans-serif;"
 								bind:value={confirmPassword}
 								required
@@ -159,7 +159,7 @@
 
 					<Button 
 						type="submit" 
-						class="w-full h-12 bg-blue-500 hover:bg-blue-400 border-0 text-white text-base font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all cursor-pointer mt-2" 
+						class="w-full h-12 bg-emerald-500 hover:bg-emerald-400 border-0 text-white text-base font-semibold shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all cursor-pointer mt-2" 
 						style="font-family: 'Rajdhani', sans-serif;"
 						disabled={loading}
 					>
@@ -181,7 +181,7 @@
 			<Card.Footer class="flex justify-center pt-2 pb-6">
 				<p class="text-base text-muted-foreground" style="font-family: 'Rajdhani', sans-serif;">
 					Already have an account?
-					<a href="/sign-in" class="text-blue-400 hover:text-blue-300 font-semibold ml-1 transition-colors">
+					<a href="/sign-in" class="text-emerald-400 hover:text-emerald-300 font-semibold ml-1 transition-colors">
 						Sign in
 					</a>
 				</p>

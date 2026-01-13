@@ -3,6 +3,7 @@
 	import { Button } from '$lib/components/ui/button';
 	import * as Card from '$lib/components/ui/card';
 	import { onMount } from 'svelte';
+	import axiomGif from '$lib/assets/axiom.gif';
 
 	const session = useSession();
 
@@ -65,34 +66,46 @@
 		</h1>
 		
 		<p class="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0" style="font-family: 'Rajdhani', sans-serif; font-weight: 400;">
-			Enter the arena. Dominate your enemies. Climb the ranks. 
-			<span class="text-emerald-400">Become legend.</span>
+			A fast-paced arcade game. Fight off enemies, rack up score, and see how long you can survive.
 		</p>
 
 		{#if !$session?.data?.user}
 			<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-				<Button href="/sign-up" size="lg" class="bg-emerald-500 hover:bg-emerald-400 border-0 text-white text-lg px-8 shadow-xl shadow-emerald-500/25 transition-all hover:shadow-emerald-500/40 hover:scale-105" style="font-family: 'Rajdhani', sans-serif; font-weight: 600;">
+				<Button href="/download" size="lg" class="bg-emerald-500 hover:bg-emerald-400 border-0 text-white text-lg px-8 shadow-xl shadow-emerald-500/25 transition-all hover:shadow-emerald-500/40 hover:scale-105" style="font-family: 'Rajdhani', sans-serif; font-weight: 600;">
 					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
-						<polyline points="10 17 15 12 10 7"></polyline>
-						<line x1="15" y1="12" x2="3" y2="12"></line>
+						<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+						<polyline points="7 10 12 15 17 10"></polyline>
+						<line x1="12" y1="15" x2="12" y2="3"></line>
 					</svg>
-					JOIN THE BATTLE
+					DOWNLOAD NOW
 				</Button>
-				<Button href="/sign-in" variant="outline" size="lg" class="text-lg px-8 border-white/20 hover:bg-white/5" style="font-family: 'Rajdhani', sans-serif; font-weight: 600;">
-					SIGN IN
+				<Button href="/sign-up" variant="outline" size="lg" class="text-lg px-8 border-white/20 hover:bg-white/5" style="font-family: 'Rajdhani', sans-serif; font-weight: 600;">
+					JOIN THE BATTLE
 				</Button>
 			</div>
 		{:else}
 			<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-				<Button size="lg" class="bg-emerald-500 hover:bg-emerald-400 border-0 text-white text-lg px-8 shadow-xl shadow-emerald-500/25 cursor-pointer transition-colors" style="font-family: 'Rajdhani', sans-serif; font-weight: 600;">
+				<Button href="/download" size="lg" class="bg-emerald-500 hover:bg-emerald-400 border-0 text-white text-lg px-8 shadow-xl shadow-emerald-500/25 cursor-pointer transition-colors" style="font-family: 'Rajdhani', sans-serif; font-weight: 600;">
 					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<polygon points="5 3 19 12 5 21 5 3"></polygon>
+						<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+						<polyline points="7 10 12 15 17 10"></polyline>
+						<line x1="12" y1="15" x2="12" y2="3"></line>
 					</svg>
-					PLAY NOW
+					DOWNLOAD NOW
 				</Button>
 			</div>
 		{/if}
+
+		<!-- Game Preview GIF -->
+		<div class="mt-10 flex justify-center lg:justify-start">
+			<div class="relative rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-emerald-500/10">
+				<img 
+					src={axiomGif} 
+					alt="AXIOM Gameplay" 
+					class="w-full max-w-xl rounded-xl"
+				/>
+			</div>
+		</div>
 	</div>
 
 	<!-- Right: Leaderboard -->
