@@ -132,6 +132,13 @@
 						>
 							Demo
 						</a>
+						<a 
+							href="/leaderboard" 
+							class="text-lg font-semibold text-muted-foreground hover:text-emerald-400 transition-colors"
+							style="font-family: 'Rajdhani', sans-serif;"
+						>
+							Leaderboard
+						</a>
 					</nav>
 				</div>
 
